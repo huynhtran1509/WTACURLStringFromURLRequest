@@ -12,7 +12,7 @@ void WTACURLStringAppendURL(NSURLRequest *request, NSMutableString *string)
     [string appendFormat:@"\"%@\" ", [[request URL] absoluteString]];
 }
 
-void WTACURLStringAppendSimpleProgressBar(NSURLRequest *request, NSMutableString *string, WTACURLStringOptions options)
+void WTACURLStringAppendSimpleProgressBar(NSMutableString *string, WTACURLStringOptions options)
 {
     if (options.simpleProgressBar)
     {
@@ -46,7 +46,7 @@ void WTACURLStringAppendHTTPVersion(NSMutableString *string, WTACURLStringOption
     }
 }
 
-void WTACURLStringAppendSLLOption(NSMutableString *string, WTACURLStringOptions options)
+void WTACURLStringAppendSSLOption(NSMutableString *string, WTACURLStringOptions options)
 {
     NSString *optionString;
     switch (options.sslOption)
@@ -94,7 +94,7 @@ void WTACURLStringAppendIPOption(NSMutableString *string, WTACURLStringOptions o
     }
 }
 
-void WTACURLStringAppendUserAgent(NSURLRequest *request, NSMutableString *string, WTACURLStringOptions options)
+void WTACURLStringAppendUserAgent(NSMutableString *string, WTACURLStringOptions options)
 {
     NSString *optionString;
     if (options.userAgent != NULL)
@@ -113,7 +113,7 @@ void WTACURLStringAppendASCIIOption(NSMutableString *string, WTACURLStringOption
 {
     if (options.ASCII)
     {
-        [string appendFormat:@"%@ ", options.shortOptions ? @"-B" : @"-ASCII"];
+        [string appendFormat:@"%@ ", options.shortOptions ? @"-B" : @"--ASCII"];
     }
 }
 
@@ -121,7 +121,7 @@ void WTACURLStringAppendCompressedOption(NSMutableString *string, WTACURLStringO
 {
     if (options.compressed)
     {
-        [string appendString:@"-compressed "];
+        [string appendString:@"--compressed "];
     }
 }
 
@@ -206,11 +206,11 @@ NSString * WTACURLStringFromURLRequest(NSURLRequest *request, WTACURLStringOptio
 {
     NSMutableString *string = [[NSMutableString alloc] initWithString:@"curl "];
     
-    WTACURLStringAppendSimpleProgressBar(request, string, options);
+    WTACURLStringAppendSimpleProgressBar(string, options);
     WTACURLStringAppendHTTPVersion(string, options);
-    WTACURLStringAppendSLLOption(string, options);
+    WTACURLStringAppendSSLOption(string, options);
     WTACURLStringAppendIPOption(string, options);
-    WTACURLStringAppendUserAgent(request, string, options);
+    WTACURLStringAppendUserAgent(string, options);
     WTACURLStringAppendASCIIOption(string, options);
     WTACURLStringAppendCompressedOption(string, options);
     WTACURLStringAppendConnectTimeoutOption(request, string, options);
