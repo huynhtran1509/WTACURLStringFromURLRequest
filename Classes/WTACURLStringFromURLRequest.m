@@ -130,11 +130,11 @@ void WTACURLStringAppendConnectTimeoutOption(NSURLRequest *request, NSMutableStr
     NSString *optionString;
     if (options.connectTimeout)
     {
-        optionString = [[NSString alloc] initWithFormat:@"--connect-timeout %d ", (NSInteger)options.connectTimeout];
+        optionString = [[NSString alloc] initWithFormat:@"--connect-timeout %ld ", (long)options.connectTimeout];
     }
     else if ([request timeoutInterval])
     {
-        optionString = [[NSString alloc] initWithFormat:@"--connect-timeout %d ", (NSInteger)[request timeoutInterval]];
+        optionString = [[NSString alloc] initWithFormat:@"--connect-timeout %ld ", (long)[request timeoutInterval]];
     }
     if (optionString)
     {
