@@ -19,6 +19,7 @@
 		2212A043180D8BD900962CCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2212A02B180D8BD900962CCB /* UIKit.framework */; };
 		2212A04B180D8BD900962CCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2212A049180D8BD900962CCB /* InfoPlist.strings */; };
 		2212A04D180D8BD900962CCB /* WTCURLStringBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2212A04C180D8BD900962CCB /* WTCURLStringBuilderTests.m */; };
+		22F8C117180D8C2100490A16 /* WTACURLStringFromURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F8C116180D8C2100490A16 /* WTACURLStringFromURLRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		2212A048180D8BD900962CCB /* WTCURLStringBuilderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WTCURLStringBuilderTests-Info.plist"; sourceTree = "<group>"; };
 		2212A04A180D8BD900962CCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2212A04C180D8BD900962CCB /* WTCURLStringBuilderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTCURLStringBuilderTests.m; sourceTree = "<group>"; };
+		22F8C115180D8C2100490A16 /* WTACURLStringFromURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTACURLStringFromURLRequest.h; sourceTree = "<group>"; };
+		22F8C116180D8C2100490A16 /* WTACURLStringFromURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTACURLStringFromURLRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +110,8 @@
 		2212A02D180D8BD900962CCB /* WTCURLStringBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				2212A036180D8BD900962CCB /* WTAAppDelegate.h */,
-				2212A037180D8BD900962CCB /* WTAAppDelegate.m */,
+				22F8C114180D8C0B00490A16 /* WTACURLStringFromURLRequest */,
+				22F8C113180D8C0100490A16 /* WTAAppDelegate */,
 				2212A039180D8BD900962CCB /* Images.xcassets */,
 				2212A02E180D8BD900962CCB /* Supporting Files */,
 			);
@@ -142,6 +145,24 @@
 				2212A049180D8BD900962CCB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22F8C113180D8C0100490A16 /* WTAAppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2212A036180D8BD900962CCB /* WTAAppDelegate.h */,
+				2212A037180D8BD900962CCB /* WTAAppDelegate.m */,
+			);
+			name = WTAAppDelegate;
+			sourceTree = "<group>";
+		};
+		22F8C114180D8C0B00490A16 /* WTACURLStringFromURLRequest */ = {
+			isa = PBXGroup;
+			children = (
+				22F8C115180D8C2100490A16 /* WTACURLStringFromURLRequest.h */,
+				22F8C116180D8C2100490A16 /* WTACURLStringFromURLRequest.m */,
+			);
+			name = WTACURLStringFromURLRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +263,7 @@
 			files = (
 				2212A034180D8BD900962CCB /* main.m in Sources */,
 				2212A038180D8BD900962CCB /* WTAAppDelegate.m in Sources */,
+				22F8C117180D8C2100490A16 /* WTACURLStringFromURLRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +466,7 @@
 				2212A052180D8BD900962CCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2212A053180D8BD900962CCB /* Build configuration list for PBXNativeTarget "WTCURLStringBuilderTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +475,7 @@
 				2212A055180D8BD900962CCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
