@@ -19,7 +19,7 @@
 		2212A043180D8BD900962CCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2212A02B180D8BD900962CCB /* UIKit.framework */; };
 		2212A04B180D8BD900962CCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2212A049180D8BD900962CCB /* InfoPlist.strings */; };
 		2212A04D180D8BD900962CCB /* WTCURLStringBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2212A04C180D8BD900962CCB /* WTCURLStringBuilderTests.m */; };
-		22F8C117180D8C2100490A16 /* WTACURLStringFromURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F8C116180D8C2100490A16 /* WTACURLStringFromURLRequest.m */; };
+		22B615E2180DE71A00445C31 /* WTACURLStringFromURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B615E1180DE71A00445C31 /* WTACURLStringFromURLRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +49,9 @@
 		2212A048180D8BD900962CCB /* WTCURLStringBuilderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WTCURLStringBuilderTests-Info.plist"; sourceTree = "<group>"; };
 		2212A04A180D8BD900962CCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2212A04C180D8BD900962CCB /* WTCURLStringBuilderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTCURLStringBuilderTests.m; sourceTree = "<group>"; };
-		22F8C115180D8C2100490A16 /* WTACURLStringFromURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTACURLStringFromURLRequest.h; sourceTree = "<group>"; };
-		22F8C116180D8C2100490A16 /* WTACURLStringFromURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTACURLStringFromURLRequest.m; sourceTree = "<group>"; };
+		22B615E0180DE71A00445C31 /* WTACURLStringFromURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTACURLStringFromURLRequest.h; path = Classes/WTACURLStringFromURLRequest.h; sourceTree = SOURCE_ROOT; };
+		22B615E1180DE71A00445C31 /* WTACURLStringFromURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTACURLStringFromURLRequest.m; path = Classes/WTACURLStringFromURLRequest.m; sourceTree = SOURCE_ROOT; };
+		22EC26AC180DB62100011F47 /* WTACURLStringFromURLRequest_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTACURLStringFromURLRequest_private.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,8 +160,9 @@
 		22F8C114180D8C0B00490A16 /* WTACURLStringFromURLRequest */ = {
 			isa = PBXGroup;
 			children = (
-				22F8C115180D8C2100490A16 /* WTACURLStringFromURLRequest.h */,
-				22F8C116180D8C2100490A16 /* WTACURLStringFromURLRequest.m */,
+				22B615E0180DE71A00445C31 /* WTACURLStringFromURLRequest.h */,
+				22B615E1180DE71A00445C31 /* WTACURLStringFromURLRequest.m */,
+				22EC26AC180DB62100011F47 /* WTACURLStringFromURLRequest_private.h */,
 			);
 			name = WTACURLStringFromURLRequest;
 			sourceTree = "<group>";
@@ -263,7 +265,7 @@
 			files = (
 				2212A034180D8BD900962CCB /* main.m in Sources */,
 				2212A038180D8BD900962CCB /* WTAAppDelegate.m in Sources */,
-				22F8C117180D8C2100490A16 /* WTACURLStringFromURLRequest.m in Sources */,
+				22B615E2180DE71A00445C31 /* WTACURLStringFromURLRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +386,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WTCURLStringBuilder/WTCURLStringBuilder-Prefix.pch";
 				INFOPLIST_FILE = "WTCURLStringBuilder/WTCURLStringBuilder-Info.plist";
@@ -397,6 +401,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WTCURLStringBuilder/WTCURLStringBuilder-Prefix.pch";
 				INFOPLIST_FILE = "WTCURLStringBuilder/WTCURLStringBuilder-Info.plist";
